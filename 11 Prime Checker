@@ -1,0 +1,12 @@
+def int_taker():
+    return int(input("Please enter a number. I will check if it is a prime number or not. \n"))
+number = int_taker()
+counter = 0
+for i in range(2, number):
+  if number % i == 0 or number == 0 or number == 1:
+      if not number == 2:
+        counter += 1
+if counter > 0:
+    print("The number you chose, {number}, is not a prime number.".format(number = number))
+elif counter == 0:
+    print("The number you chose, {number}, is a prime number.".format(number = number))
