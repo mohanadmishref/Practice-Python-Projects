@@ -6,7 +6,7 @@ def guessing_game():
     guessing_count = 0
     while guessing_number != random_number:
         if guessing_number != random_number:
-          guessing_number = int(input("Guess a number 1-9 please: "))
+          guessing_number = int(input("Guess a number 1-9 please: \n"))
           guessing_count += 1
           print("You guessed the number {guessing_number}".format(guessing_number = guessing_number))
           if guessing_number < random_number:
