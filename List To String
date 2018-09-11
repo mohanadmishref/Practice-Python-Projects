@@ -1,0 +1,11 @@
+new_list = ["Hi", "everyone", "thanks", "for", "coming"]
+def list_to_string(string_between, list):
+  new_string = ""
+  try:
+        new_string = string_between.join(list)
+  except TypeError:
+    print("Function called with wrong data types")
+  except AttributeError:
+    print("Function called with wrong data types")
+  return new_string
+print(list_to_string(" ", new_list))
