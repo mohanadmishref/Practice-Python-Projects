@@ -1,0 +1,10 @@
+a = [5, 10, 15, 20, 25]
+#Method one of solving this. Using a function that simply appends the first and last item in provided list into a list called new_list. Returns new_list later.
+def list_ends(lst1):
+    new_list = []
+    new_list.append(lst1[0])
+    new_list.append(lst1[-1])
+    return new_list
+
+#Method two of solving this. One list comprehension that iterates through the entire list and checks for the item in the list equal to the first and last item in the list.
+new_list2 = [i for i in a if i == a[0] or i == a[-1]]
