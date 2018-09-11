@@ -1,0 +1,9 @@
+def Fibonacci(i):
+  l=[0,1]
+  for i in range(0,i-2):
+    m=l[i]+l[i+1]
+    l.append(m)
+  print(l)
+
+a=int(input('How many fibonacci numbers would you like created?: '))
+Fibonacci(a)
