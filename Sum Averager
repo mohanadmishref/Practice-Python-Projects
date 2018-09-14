@@ -2,6 +2,12 @@ def sum_averager():
  while True:   
       try:
           numNumbers = int(input("How many numbers would you like to average? "))
+          if numNumbers > 50:
+              sure = input("Trust me, you don't want to type in that many numbers. If you are absolutely sure though, type YES\n")
+              if sure == "YES":
+                  1 + 1
+              else:
+                  return None
       except ValueError:
           print("Please only input integers!")
           quitval = input("y/n to quit ")
@@ -20,3 +26,13 @@ def sum_averager():
           sum += tempNum
       sum = sum/numNumbers
       print("The average of all the numbers you've entered is: {sum}".format(sum = sum))
+      try:
+          quitval = input("Would you like to run this again? y/n\n")
+          if quitval == "y":
+             continue
+          else:
+              print("Quttiing...")
+              return None
+      except ValueError:
+          print("Error!")
+          return None
