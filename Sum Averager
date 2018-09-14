@@ -1,0 +1,22 @@
+def sum_averager():
+ while True:   
+      try:
+          numNumbers = int(input("How many numbers would you like to average? "))
+      except ValueError:
+          print("Please only input integers!")
+          quitval = input("y/n to quit ")
+          if quitval == "y":
+              return None
+          else:
+              continue
+      sum = 0
+      print("You have chosen " + str(numNumbers) + " numbers to average.")
+      for i in range(1, numNumbers + 1):
+          try:
+              tempNum = float(input("Please enter number " + str(i) + ": "))
+          except ValueError:
+              print("Please only input integers!")
+              continue
+          sum += tempNum
+      sum = sum/numNumbers
+      print("The average of all the numbers you've entered is: {sum}".format(sum = sum))
