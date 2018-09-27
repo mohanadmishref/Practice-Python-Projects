@@ -1,0 +1,13 @@
+def gameboard():
+    dimension_x = int(input("Please give me the gameboard dimensions for X: "))
+    dimension_y = int(input("Please give me the gameboard dimensions for Y: "))
+    
+    x = " ---"
+    y = "|"
+    
+    for i in range(dimension_x):
+        print(x * (dimension_x))
+        print((y + "   ") * (dimension_y + 1))
+    print(x * (dimension_x))
+       
+gameboard()
